@@ -2,9 +2,10 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in report_err.gemspec
+# Specify your gem's dependencies in reporterr.gemspec
 gemspec
 
+gem "rails"
 gem "rake", "~> 13.0"
 
 gem "minitest", "~> 5.16"

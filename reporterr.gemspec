@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/report_err/version"
+require_relative "lib/reporterr/version"
 
 Gem::Specification.new do |spec|
   spec.name = "reporterr"
@@ -25,4 +25,6 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "rails", ">= 6.0"
 end
