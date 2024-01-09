@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in reporterr.gemspec
+# Specify your gem's dependencies in report_err.gemspec
 gemspec
 
 gem "rake", "~> 13.0"

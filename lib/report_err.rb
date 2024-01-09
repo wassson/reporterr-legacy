@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "reporterr/version"
+require_relative "report_err/version"
 
-module Reporterr
+module ReportErr
   class Error < StandardError; end
   # Your code goes here...
 end
