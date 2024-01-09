@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/rubymine,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=rubymine,macos
 
+*.gem
+test/dummy/tmp/**/*
+
 ### macOS ###
 # General
 .DS_Store
