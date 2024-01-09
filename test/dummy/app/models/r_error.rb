@@ -1,3 +1,3 @@
-# frozen_string_literal: true
-
-class RError < ApplicationRecord; end
+class RError < ApplicationRecord
+  serialize :context, Hash
+end

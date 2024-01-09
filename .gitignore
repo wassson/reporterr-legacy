@@ -3,6 +3,7 @@
 
 *.gem
 test/dummy/tmp/**/*
+test/dummy/storage/**/*
 
 ### macOS ###
 # General
