@@ -4,3 +4,5 @@ class <%= class_name %>Subscriber
     puts "Error Reporting Service"
   end
 end
+
+Rails.error.subscribe(<%= class_name %>Subscriber.new)

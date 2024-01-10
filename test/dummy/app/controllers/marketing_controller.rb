@@ -2,9 +2,9 @@
 
 class MarketingController < ApplicationController
   def index
-    Rails.error.handle(StandardError) do
-      puts "Hello!"
-      raise "Fake error"
+    Rails.error.handle(context: { user_id: 3 }, severity: :info) do
+      puts 'Hello!'
+      raise StandardError
     end
   end
 end

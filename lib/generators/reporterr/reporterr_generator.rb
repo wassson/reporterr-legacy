@@ -16,24 +16,24 @@ module Reporterr
 
         system("rails generate migration Create#{sys_call}")
 
-        puts "\n#{table_name} table migration generated"
+        puts "\n#{table_name} table migration generated in /db/migrate"
         puts '======================================================'
       end
 
       def create_reporterr_model_file
-        model_name = name.gsub(/(.)([A-Z])/, '\1_\2').downcase
-        template 'model.rb.tt', File.join('app/models/', "#{model_name}.rb")
+        @name = name.gsub(/(.)([A-Z])/, '\1_\2').downcase
+        template 'model.rb.tt', File.join('app/models/', "#{@name}.rb")
 
-        puts "\n#{name} model generated"
+        puts "\n#{@name} model generated in /models"
         puts '======================================================'
       end
 
       def create_reporterr_subscriber_file
-        subscriber_name = name.gsub(/(.)([A-Z])/, '\1_\2').downcase
+        subscriber_name = @name
         template 'subscriber.rb.tt',
-                 File.join('app/config/initializers',
+                 File.join('config/initializers',
                            "#{subscriber_name}_subscriber.rb")
-        puts "\n#{name} subscriber generated in config/initializers"
+        puts "\n#{subscriber_name} subscriber generated in /config/initializers"
         puts '======================================================'
       end
     end
