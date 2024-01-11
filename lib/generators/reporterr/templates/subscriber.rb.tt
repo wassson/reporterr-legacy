@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 class <%= class_name %>Subscriber
   def report(error, handled:, severity:, context:, source: nil)
-    <%= class_name %>.create!(error, severity: severity, context: context)
+    ctx = ReportErr::ContextBuilder.build(context)
+    <%= class_name %>.create!(error:, severity:, context: ctx)
   end
 end
 
