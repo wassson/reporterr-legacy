@@ -11,7 +11,7 @@ module Reporterr
 
       def create_reporterr_migration_file
         table_name = name
-        attributes = %w[error:text severity context:text]
+        attributes = %w[error:text severity context:json]
         sys_call = "#{table_name} #{attributes.join(' ')}"
 
         system("rails generate migration Create#{sys_call}")
